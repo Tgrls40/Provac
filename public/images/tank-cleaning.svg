@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Achtergrond -->
+  <rect width="400" height="300" fill="#003399" opacity="0.1"/>
+  
+  <!-- Tank illustratie -->
+  <rect x="100" y="80" width="200" height="150" rx="10" fill="#003399"/>
+  <rect x="120" y="100" width="160" height="110" rx="5" fill="#ffffff" opacity="0.3"/>
+  
+  <!-- Reinigingsapparatuur -->
+  <rect x="50" y="130" width="50" height="30" fill="#E30613"/>
+  <path d="M100 145 L 120 145" stroke="#E30613" stroke-width="5" fill="none"/>
+  <circle cx="50" cy="145" r="15" fill="#333"/>
+  
+  <!-- Waterstraal -->
+  <path d="M120 145 Q 150 120 180 145 Q 210 170 240 145" stroke="#87CEEB" stroke-width="5" fill="none" stroke-dasharray="5,3"/>
+  
+  <!-- Tekst -->
+  <text x="200" y="200" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">TANK TEMİZLİĞİ</text>
+</svg>

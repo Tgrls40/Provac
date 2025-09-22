@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Achtergrond -->
+  <rect width="400" height="300" fill="#E30613" opacity="0.1"/>
+  
+  <!-- Voedsel fabriek -->
+  <rect x="120" y="120" width="160" height="100" rx="5" fill="#FFFFFF" stroke="#333333" stroke-width="2"/>
+  <rect x="140" y="220" width="120" height="30" fill="#EEEEEE" stroke="#333333" stroke-width="2"/>
+  
+  <!-- Ramen -->
+  <rect x="140" y="140" width="20" height="20" fill="#87CEEB"/>
+  <rect x="180" y="140" width="20" height="20" fill="#87CEEB"/>
+  <rect x="220" y="140" width="20" height="20" fill="#87CEEB"/>
+  
+  <!-- Schoorsteen -->
+  <rect x="240" y="90" width="20" height="30" fill="#CCCCCC"/>
+  
+  <!-- Hygiëne symbool -->
+  <circle cx="200" cy="180" r="25" fill="#FFFFFF" stroke="#E30613" stroke-width="2"/>
+  <path d="M185 180 L 200 165 L 215 180 L 200 195 Z" fill="#E30613"/>
+  
+  <!-- Tekst -->
+  <text x="200" y="270" font-family="Arial" font-size="14" fill="#E30613" text-anchor="middle" font-weight="bold">GIDA</text>
+</svg>

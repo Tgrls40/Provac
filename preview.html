@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provacclean</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    section { padding: 4rem 0; }
+    @media (max-width: 640px) { section { padding: 2rem 0; } }
+    .lang-btn.active { background-color: #E30613 !important; color: #fff !important; }
+    .lang-btn:not(.active) { background-color: #f5f5f5 !important; color: #000 !important; }
+    [data-lang="en"] { display: none; }
+    body.english [data-lang="tr"] { display: none; }
+    body.english [data-lang="en"] { display: block; }
+    span[data-lang="en"], a[data-lang="en"] { display: none; }
+    body.english span[data-lang="tr"], body.english a[data-lang="tr"] { display: none; }
+    body.english span[data-lang="en"], body.english a[data-lang="en"] { display: inline; }
+  </style>
+</head>
+<body class="text-neutral-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3">
+          <img src="./public/images/WhatsApp Image 2025-09-19 at 09.57.07 - Bewerkt.png" alt="Provacclean Logo" class="h-24 w-auto">
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="#home" class="text-sm text-neutral-700 hover:text-red-600">
+            <span data-lang="tr">Ana Sayfa</span>
+            <span data-lang="en">Home</span>
+          </a>
+          <a href="#hizmetler" class="text-sm text-neutral-700 hover:text-red-600">
+            <span data-lang="tr">Hizmetler</span>
+            <span data-lang="en">Services</span>
+          </a>
+          <a href="#sektorler" class="text-sm text-neutral-700 hover:text-red-600">
+            <span data-lang="tr">Sektörler</span>
+            <span data-lang="en">Sectors</span>
+          </a>
+          <a href="#guvenlik" class="text-sm text-neutral-700 hover:text-red-600">
+            <span data-lang="tr">Güvenlik</span>
+            <span data-lang="en">Safety</span>
+          </a>
+          <a href="#hakkimizda" class="text-sm text-neutral-700 hover:text-red-600">
+            <span data-lang="tr">Hakkımızda</span>
+            <span data-lang="en">About Us</span>
+          </a>
+          <a href="#iletisim" class="text-sm text-neutral-700 hover:text-red-600">
+            <span data-lang="tr">İletişim</span>
+            <span data-lang="en">Contact</span>
+          </a>
+          <button id="openModalBtn" class="px-4 py-2 rounded-xl text-white text-sm font-medium shadow hover:opacity-95 transition" style="background: linear-gradient(90deg, #E30613 0%, #003399 100%)">
+            <span data-lang="tr">Teklif iste</span>
+            <span data-lang="en">Request Quote</span>
+          </button>
+          <div class="flex gap-2 items-center">
+            <button id="langTR" class="px-2 py-1 rounded lang-btn active" style="background-color: #E30613; color: #fff">TR</button>
+            <button id="langEN" class="px-2 py-1 rounded lang-btn" style="background-color: #f5f5f5; color: #000">EN</button>
+          </div>
+        </nav>
+        <button class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-neutral-100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M3.75 6.75A.75.75 0 014.5 6h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75zm0 10.5a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75zm0-5.25a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z" clip-rule="evenodd"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="relative h-[80vh] w-full">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-900 to-blue-700"></div>
+      <div class="absolute inset-0" style="background-color: rgba(0,0,0,0.2)"></div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <img src="./public/images/vacuum-truck.svg" alt="Endüstriyel vakum kamyonu" class="w-full h-full object-cover opacity-80">
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
+        <div class="bg-black bg-opacity-50 p-6 rounded-xl backdrop-blur-sm max-w-3xl">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+            <span data-lang="tr">Endüstriyel temizlik, taşıma ve atık yönetimi</span>
+            <span data-lang="en">Industrial cleaning, transport and waste management</span>
+          </h1>
+          <p class="mt-4 text-lg text-white/90">
+            <span data-lang="tr">Provacclean; vakum kamyonu, yüksek basınçlı su jeti ve tank temizliği ile hızlı ve güvenli çözümler sunar. Fabrikalar, terminaller ve şantiyeler için 7/24 hizmet.</span>
+            <span data-lang="en">Provacclean offers fast and safe solutions with vacuum trucks, high-pressure water jets and tank cleaning. 24/7 service for factories, terminals and construction sites.</span>
+          </p>
+          <div class="mt-8">
+            <button id="openModalBtn2" class="px-6 py-3 rounded-xl text-white text-base font-medium shadow-lg hover:opacity-95 transition" style="background: linear-gradient(90deg, #E30613 0%, #003399 100%)">
+              <span data-lang="tr">Teklif iste</span>
+              <span data-lang="en">Request Quote</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="hizmetler" class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center">
+        <span data-lang="tr">Hizmetler</span>
+        <span data-lang="en">Services</span>
+      </h2>
+      <div class="mt-12 grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="h-48 flex items-center justify-center">
+            <img src="./public/images/vacuum-service.svg" alt="Vakum Kamyonu" class="h-40 w-auto">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">
+              <span data-lang="tr">Vakum Kamyonu Hizmetleri</span>
+              <span data-lang="en">Vacuum Truck Services</span>
+            </h3>
+            <p class="mt-2 text-neutral-600">
+              <span data-lang="tr">Çamur, kum, çimento, granül ve yağ kalıntıları gibi ıslak/kuru malzemelerin emilmesi, taşınması ve bertarafı.</span>
+              <span data-lang="en">Suction, transport and disposal of wet/dry materials such as sludge, sand, cement, granules and oil residues.</span>
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="h-48 flex items-center justify-center">
+            <img src="./public/images/tank-cleaning.svg" alt="Tank Temizliği" class="h-40 w-auto">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">
+              <span data-lang="tr">Tank & Silo Temizliği</span>
+              <span data-lang="en">Tank & Silo Cleaning</span>
+            </h3>
+            <p class="mt-2 text-neutral-600">
+              <span data-lang="tr">Tank, silo ve depolama sistemlerinin mekanik ve yüksek basınçlı güvenli temizliği.</span>
+              <span data-lang="en">Safe mechanical and high-pressure cleaning of tanks, silos and storage systems.</span>
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="h-48 flex items-center justify-center">
+            <img src="./public/images/water-jet.svg" alt="Yüksek Basınçlı Su Jeti" class="h-40 w-auto">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">
+              <span data-lang="tr">Yüksek Basınçlı Su Jeti</span>
+              <span data-lang="en">High Pressure Water Jetting</span>
+            </h3>
+            <p class="mt-2 text-neutral-600">
+              <span data-lang="tr">Zorlu kirlerin temizlenmesi, tıkanıklık açma ve yüzey/hat temizliği için profesyonel ekipman.</span>
+              <span data-lang="en">Professional equipment for cleaning tough dirt, unclogging and surface/line cleaning.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectors -->
+  <section id="sektorler" class="bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center">
+        <span data-lang="tr">Sektörler</span>
+        <span data-lang="en">Sectors</span>
+      </h2>
+      <div class="mt-12 grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="h-48 flex items-center justify-center">
+            <img src="./public/images/cement-mining.svg" alt="Çimento & Madencilik" class="h-40 w-auto">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">
+              <span data-lang="tr">Çimento & Madencilik</span>
+              <span data-lang="en">Cement & Mining</span>
+            </h3>
+            <p class="mt-2 text-neutral-600">
+              <span data-lang="tr">Silo, filtre ve bant sistemleri</span>
+              <span data-lang="en">Silo, filter and belt systems</span>
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="h-48 flex items-center justify-center">
+            <img src="./public/images/petrochemical.svg" alt="Petrokimya" class="h-40 w-auto">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">
+              <span data-lang="tr">Petrokimya</span>
+              <span data-lang="en">Petrochemical</span>
+            </h3>
+            <p class="mt-2 text-neutral-600">
+              <span data-lang="tr">Depolama tankları, döküntü müdahalesi</span>
+              <span data-lang="en">Storage tanks, spill response</span>
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="h-48 flex items-center justify-center">
+            <img src="./public/images/food-industry.svg" alt="Gıda" class="h-40 w-auto">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">
+              <span data-lang="tr">Gıda</span>
+              <span data-lang="en">Food Industry</span>
+            </h3>
+            <p class="mt-2 text-neutral-600">
+              <span data-lang="tr">Hijyenik temizlik, HACCP</span>
+              <span data-lang="en">Hygienic cleaning, HACCP</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Section -->
+  <section id="guvenlik" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">
+        <span data-lang="tr">Önce Güvenlik</span>
+        <span data-lang="en">Safety First</span>
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-neutral-50 rounded-lg p-6 shadow-sm">
+          <h3 class="font-semibold text-lg mb-3">
+            <span data-lang="tr">LMRA ve toolbox toplantıları</span>
+            <span data-lang="en">LMRA and toolbox meetings</span>
+          </h3>
+          <p class="text-neutral-600">
+            <span data-lang="tr">Her işe başlamadan önce risk değerlendirmesi ve güvenlik toplantıları yapıyoruz.</span>
+            <span data-lang="en">We conduct risk assessments and safety meetings before starting each job.</span>
+          </p>
+        </div>
+        <div class="bg-neutral-50 rounded-lg p-6 shadow-sm">
+          <h3 class="font-semibold text-lg mb-3">
+            <span data-lang="tr">Risk analizi ve iş izinleri</span>
+            <span data-lang="en">Risk analysis and work permits</span>
+          </h3>
+          <p class="text-neutral-600">
+            <span data-lang="tr">Tüm işlerimiz detaylı risk analizi ve gerekli izinler alındıktan sonra başlar.</span>
+            <span data-lang="en">All our operations begin after detailed risk analysis and obtaining necessary permits.</span>
+          </p>
+        </div>
+        <div class="bg-neutral-50 rounded-lg p-6 shadow-sm">
+          <h3 class="font-semibold text-lg mb-3">
+            <span data-lang="tr">Gaz ölçümü & kapalı alan çalışmaları</span>
+            <span data-lang="en">Gas measurement & confined space work</span>
+          </h3>
+          <p class="text-neutral-600">
+            <span data-lang="tr">Kapalı alanlarda sürekli gaz ölçümü ve özel güvenlik önlemleri uyguluyoruz.</span>
+            <span data-lang="en">We implement continuous gas measurement and special safety measures in confined spaces.</span>
+          </p>
+        </div>
+        <div class="bg-neutral-50 rounded-lg p-6 shadow-sm">
+          <h3 class="font-semibold text-lg mb-3">
+            <span data-lang="tr">Kişisel koruyucu donanım (KKD)</span>
+            <span data-lang="en">Personal protective equipment (PPE)</span>
+          </h3>
+          <p class="text-neutral-600">
+            <span data-lang="tr">Tüm personelimiz işe uygun kişisel koruyucu donanım kullanır.</span>
+            <span data-lang="en">All our personnel use job-appropriate personal protective equipment.</span>
+          </p>
+        </div>
+        <div class="bg-neutral-50 rounded-lg p-6 shadow-sm md:col-span-2">
+          <h3 class="font-semibold text-lg mb-3">
+            <span data-lang="tr">Çevreye duyarlı bertaraf</span>
+            <span data-lang="en">Environmentally responsible disposal</span>
+          </h3>
+          <p class="text-neutral-600">
+            <span data-lang="tr">Atıkların çevreye zarar vermeden, yasal düzenlemelere uygun şekilde bertaraf edilmesini sağlıyoruz.</span>
+            <span data-lang="en">We ensure waste is disposed of in accordance with legal regulations without harming the environment.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="hakkimizda" class="bg-neutral-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-8">
+        <span data-lang="tr">Provacclean Hakkında</span>
+        <span data-lang="en">About Provacclean</span>
+      </h2>
+      
+      <div class="mb-10">
+        <p class="text-neutral-700 text-lg mb-4">
+          <span data-lang="tr">Yılların tecrübesine sahip çevik bir ekibiz. Vakum kamyonu ve yüksek basınç ekipmanlarımızı düzenli bakım ile daima hazır tutar, güvenli ve kesintisiz hizmet sunarız.</span>
+          <span data-lang="en">We are an agile team with years of experience. We keep our vacuum trucks and high-pressure equipment always ready with regular maintenance, providing safe and uninterrupted service.</span>
+        </p>
+        <p class="text-neutral-700 text-lg mb-4">
+          <span data-lang="tr">Şeffaf çalışırız: net kapsam, tek irtibat kişisi ve iş bitiminde açık raporlama.</span>
+          <span data-lang="en">We work transparently: clear scope, single point of contact and open reporting at the end of the job.</span>
+        </p>
+      </div>
+      
+      <div class="mb-8">
+        <ul class="space-y-2 text-neutral-700">
+          <li class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span data-lang="tr">Güvenlik ve kalite her şeyden önce</span>
+            <span data-lang="en">Safety and quality above all</span>
+          </li>
+          <li class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span data-lang="tr">Hızlı mobilizasyon ve sıkı planlama</span>
+            <span data-lang="en">Fast mobilization and strict planning</span>
+          </li>
+          <li class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span data-lang="tr">Dürüst iletişim ve net fiyatlandırma</span>
+            <span data-lang="en">Honest communication and clear pricing</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="mt-12 bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="grid grid-cols-3 divide-x divide-neutral-100">
+          <div class="p-8 text-center bg-gradient-to-b from-white to-neutral-50 hover:bg-blue-50 transition duration-300">
+            <div class="text-4xl font-bold text-blue-600 mb-3">10+</div>
+            <div class="text-neutral-700 font-medium">
+              <span data-lang="tr">Yıl deneyim</span>
+              <span data-lang="en">Years experience</span>
+            </div>
+          </div>
+          <div class="p-8 text-center bg-gradient-to-b from-white to-neutral-50 hover:bg-blue-50 transition duration-300">
+            <div class="text-4xl font-bold text-blue-600 mb-3">300+</div>
+            <div class="text-neutral-700 font-medium">
+              <span data-lang="tr">Proje</span>
+              <span data-lang="en">Projects</span>
+            </div>
+          </div>
+          <div class="p-8 text-center bg-gradient-to-b from-white to-neutral-50 hover:bg-blue-50 transition duration-300">
+            <div class="text-4xl font-bold text-blue-600 mb-3">7/24</div>
+            <div class="text-neutral-700 font-medium">
+              <span data-lang="tr">Ulaşılabilir</span>
+              <span data-lang="en">Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="iletisim" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">
+        <span data-lang="tr">İletişim</span>
+        <span data-lang="en">Contact</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="text-lg mb-6">
+            <span data-lang="tr">İhtiyacınızı kısaca yazın, aynı gün dönüş yapalım.</span>
+            <span data-lang="en">Briefly describe your needs, we'll get back to you the same day.</span>
+          </p>
+          
+          <div class="bg-neutral-50 p-6 rounded-lg shadow-sm">
+            <p class="mb-2"><strong>
+              <span data-lang="tr">Telefon:</span>
+              <span data-lang="en">Phone:</span>
+            </strong> +90 5XX XXX XX XX</p>
+            <p class="mb-2"><strong>E-mail:</strong> info@provacclean.com</p>
+            <p class="mb-2"><strong>
+              <span data-lang="tr">Adres:</span>
+              <span data-lang="en">Address:</span>
+            </strong> 
+              <span data-lang="tr">Organize Sanayi Bölgesi, Türkiye</span>
+              <span data-lang="en">Organized Industrial Zone, Turkey</span>
+            </p>
+            <p class="text-sm text-neutral-500 mt-4">
+              <span data-lang="tr">Türkiye genelinde çalışıyoruz. Konuma bağlı olarak mobilizasyon ücreti uygulanabilir.</span>
+              <span data-lang="en">We work throughout Turkey. Mobilization fee may apply depending on location.</span>
+            </p>
+            
+            <a href="https://wa.me/+3187846448" target="_blank" class="mt-6 px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition inline-flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+              <span data-lang="tr">WhatsApp</span>
+              <span data-lang="en">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <form action="https://formsubmit.co/info@provacclean.com" method="POST" class="space-y-4">
+            <!-- FormSubmit configuratie -->
+            <input type="hidden" name="_subject" value="Nieuw contactformulier bericht">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://provacclean.com/thank-you">
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-neutral-700 mb-1">
+                  <span data-lang="tr">Ad Soyad*</span>
+                  <span data-lang="en">Full Name*</span>
+                </label>
+                <input type="text" name="name" class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Adınız Soyadınız" required>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-neutral-700 mb-1">
+                  <span data-lang="tr">Firma</span>
+                  <span data-lang="en">Company</span>
+                </label>
+                <input type="text" name="company" class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="(opsiyonel)">
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-neutral-700 mb-1">
+                  <span data-lang="tr">Telefon*</span>
+                  <span data-lang="en">Phone*</span>
+                </label>
+                <input type="tel" name="phone" class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="GSM" required>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-neutral-700 mb-1">
+                  <span data-lang="tr">E-posta</span>
+                  <span data-lang="en">E-mail</span>
+                </label>
+                <input type="email" name="email" class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="ad@firma.com">
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-neutral-700 mb-1">
+                <span data-lang="tr">Mesaj*</span>
+                <span data-lang="en">Message*</span>
+              </label>
+              <textarea rows="5" name="message" class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="İşin kısa açıklaması" required></textarea>
+            </div>
+            
+            <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-red-600 to-blue-600 text-white font-medium rounded-lg hover:opacity-90 transition">
+              <span data-lang="tr">Gönder</span>
+              <span data-lang="en">Submit</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Popup -->
+  <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 mx-4">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold text-neutral-800">
+          <span data-lang="tr">Teklif Formu</span>
+          <span data-lang="en">Quote Request Form</span>
+        </h3>
+        <button id="closeModalBtn" class="text-neutral-500 hover:text-neutral-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <form id="modalContactForm" class="space-y-4">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-neutral-700 mb-1">Ad Soyad*</label>
+            <input type="text" name="name" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Adınız Soyadınız">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-neutral-700 mb-1">Firma</label>
+            <input type="text" name="company" class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="(opsiyonel)">
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-neutral-700 mb-1">Telefon*</label>
+            <input type="tel" name="phone" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="GSM">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-neutral-700 mb-1">E-posta</label>
+            <input type="email" name="email" class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="ad@firma.com">
+          </div>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-neutral-700 mb-1">Mesaj*</label>
+          <textarea name="message" rows="5" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="İşin kısa açıklaması"></textarea>
+        </div>
+        
+        <button type="submit" id="modalSubmitBtn" class="w-full py-3 px-4 bg-gradient-to-r from-red-600 to-blue-600 text-white font-medium rounded-lg hover:opacity-90 transition">
+          Gönder
+        </button>
+        
+        <div id="modalFormSuccess" class="hidden py-3 px-4 bg-green-100 text-green-800 rounded-lg text-center">
+          Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-900 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <div class="mb-4">
+          <img src="./public/images/WhatsApp Image 2025-09-19 at 09.57.07 - Bewerkt.png" alt="Provacclean Logo" class="h-20 w-auto mx-auto">
+        </div>
+        <p class="text-neutral-400 max-w-2xl mx-auto">Türkiye genelinde endüstriyel temizlik. Vakum kamyonu hizmetleri, tank temizliği ve yüksek basınçlı su jeti – güvenli ve hızlı.</p>
+        <div class="mt-8 text-sm text-neutral-500">
+          © 2023 Provacclean. Tüm hakları saklıdır.
+        </div>
+      </div>
+    </div>
+  </footer>
+<script>
+    // Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const openModalBtn = document.getElementById('openModalBtn');
+      const openModalBtn2 = document.getElementById('openModalBtn2');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const contactModal = document.getElementById('contactModal');
+      const modalContactForm = document.getElementById('modalContactForm');
+      const modalFormSuccess = document.getElementById('modalFormSuccess');
+      
+      // Function to open modal
+      function openModal() {
+        contactModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        // Reset form and hide success message when opening modal
+        if (modalContactForm) {
+          modalContactForm.reset();
+          modalFormSuccess.classList.add('hidden');
+        }
+      }
+      
+      // Open modal from header button
+      openModalBtn.addEventListener('click', openModal);
+      
+      // Open modal from hero section button
+      openModalBtn2.addEventListener('click', openModal);
+      
+      // Close modal
+      closeModalBtn.addEventListener('click', function() {
+        contactModal.classList.add('hidden');
+        document.body.style.overflow = ''; // Re-enable scrolling
+      });
+      
+      // Close modal when clicking outside
+      contactModal.addEventListener('click', function(e) {
+        if (e.target === contactModal) {
+          contactModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      });
+      
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !contactModal.classList.contains('hidden')) {
+          contactModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      });
+      
+      // Handle form submission
+      if (modalContactForm) {
+        modalContactForm.addEventListener('submit', function(e) {
+          e.preventDefault(); // Prevent actual form submission
+          
+          // Show success message
+          modalFormSuccess.classList.remove('hidden');
+          
+          // Disable submit button to prevent multiple submissions
+          document.getElementById('modalSubmitBtn').disabled = true;
+          
+          // In a real application, you would send the form data to a server here
+          // For example:
+          // const formData = new FormData(modalContactForm);
+          // fetch('https://jouw-server-url.nl/contact', {
+          //   method: 'POST',
+          //   body: formData
+          // })
+          // .then(response => response.json())
+          // .then(data => console.log('Success:', data))
+          // .catch(error => console.error('Error:', error));
+          
+          // For demo purposes, we'll just simulate a successful submission
+          
+          // After 3 seconds, close the modal
+          setTimeout(function() {
+            contactModal.classList.add('hidden');
+            document.body.style.overflow = '';
+            
+            // Reset form and hide success message after closing
+            setTimeout(function() {
+              modalContactForm.reset();
+              modalFormSuccess.classList.add('hidden');
+              document.getElementById('modalSubmitBtn').disabled = false;
+            }, 500);
+          }, 3000);
+        });
+      }
+    });
+  </script>
+    <!-- Language Switcher Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Taal knoppen
+      const langTR = document.getElementById('langTR');
+      const langEN = document.getElementById('langEN');
+      
+      // Taal wissel functie
+      function switchLanguage(lang) {
+        if (lang === 'tr') {
+          document.body.classList.remove('english');
+          langTR.classList.add('active');
+          langEN.classList.remove('active');
+        } else if (lang === 'en') {
+          document.body.classList.add('english');
+          langTR.classList.remove('active');
+          langEN.classList.add('active');
+        }
+      }
+      
+      // Event listeners voor taal knoppen
+      langTR.addEventListener('click', function() {
+        switchLanguage('tr');
+      });
+      
+      langEN.addEventListener('click', function() {
+        switchLanguage('en');
+      });
+    });
+  </script>
+</body>
+</html>

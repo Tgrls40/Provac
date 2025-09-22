@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Achtergrond -->
+  <rect width="400" height="300" fill="#003399" opacity="0.1"/>
+  
+  <!-- Olietanks -->
+  <circle cx="150" cy="150" r="60" fill="#333333"/>
+  <circle cx="150" cy="150" r="55" fill="#555555"/>
+  <circle cx="250" cy="170" r="40" fill="#333333"/>
+  <circle cx="250" cy="170" r="35" fill="#555555"/>
+  
+  <!-- Pijpleidingen -->
+  <rect x="150" y="210" width="100" height="10" fill="#777777"/>
+  <rect x="150" y="210" width="10" height="30" fill="#777777"/>
+  <rect x="250" y="210" width="10" height="30" fill="#777777"/>
+  
+  <!-- Raffinaderij elementen -->
+  <rect x="300" y="120" width="10" height="120" fill="#777777"/>
+  <rect x="310" y="120" width="30" height="10" fill="#777777"/>
+  <rect x="310" y="150" width="30" height="10" fill="#777777"/>
+  <rect x="310" y="180" width="30" height="10" fill="#777777"/>
+  <rect x="310" y="210" width="30" height="10" fill="#777777"/>
+  
+  <!-- Tekst -->
+  <text x="200" y="270" font-family="Arial" font-size="14" fill="#003399" text-anchor="middle" font-weight="bold">PETROKİMYA</text>
+</svg>

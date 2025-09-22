@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Achtergrond -->
+  <rect width="400" height="300" fill="#003399" opacity="0.1"/>
+  
+  <!-- Hogedrukspuit -->
+  <rect x="150" y="150" width="100" height="30" rx="5" fill="#333"/>
+  <rect x="120" y="160" width="30" height="10" fill="#333"/>
+  <rect x="250" y="160" width="30" height="10" fill="#333"/>
+  
+  <!-- Waterstraal -->
+  <path d="M280 165 Q 320 145 340 180" stroke="#87CEEB" stroke-width="8" fill="none"/>
+  <path d="M280 165 Q 310 165 330 140" stroke="#87CEEB" stroke-width="6" fill="none"/>
+  <path d="M280 165 Q 300 185 330 190" stroke="#87CEEB" stroke-width="7" fill="none"/>
+  
+  <!-- Operator -->
+  <circle cx="100" cy="165" r="20" fill="#E30613"/>
+  <rect x="90" y="185" width="20" height="40" fill="#E30613"/>
+  <rect x="85" y="185" width="30" height="10" fill="#E30613"/>
+  
+  <!-- Tekst -->
+  <text x="200" y="220" font-family="Arial" font-size="14" fill="#003399" text-anchor="middle" font-weight="bold">YÜKSEK BASINÇLI SU JETİ</text>
+</svg>
