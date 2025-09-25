@@ -36,8 +36,16 @@ Alle afbeeldingen staan in de map `public/images/`. Om een afbeelding te vervang
 
 ### Belangrijke afbeeldingen:
 - **Logo**: `./public/images/WhatsApp Image 2025-09-19 at 09.57.07 - Bewerkt.png` (regel 28 en 547)
-- **Hero afbeelding**: `./public/images/vacuum-truck.svg` (regel 76)
+- **Hero afbeelding**: `./public/images/Canva turkiye.png` (regel 115)
 - **Service iconen**: diverse SVG bestanden in de `public/images/` map
+
+### Afmetingen van de hoofdfoto
+De hoofdfoto (hero afbeelding) wordt weergegeven met de volgende eigenschappen:
+- **Hoogte**: De container heeft een hoogte van 80% van de viewport hoogte (`h-[80vh]`)
+- **Breedte**: De afbeelding neemt de volledige breedte van de container in
+- **Weergave**: De afbeelding wordt geschaald om de container te vullen (`object-cover`) met een opacity van 80%
+
+Voor het beste resultaat, gebruik een afbeelding met een hoge resolutie en een aspect ratio van ongeveer 16:9 of 4:3.
 
 ## Deployment met Vercel
 
