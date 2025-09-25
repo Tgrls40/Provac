@@ -1,82 +1,53 @@
 # Provacclean Website
 
-A bilingual (Turkish/English) website for Provacclean industrial cleaning services.
+## WhatsApp Nummer Aanpassen
 
-## Setup Instructions
+Het WhatsApp-nummer staat op de volgende locatie:
+- **Bestand**: `preview.html`
+- **Regel**: 419
+- **Huidige code**: `<a href="https://wa.me/+3187846448" target="_blank" class="mt-6 px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition inline-flex items-center">`
 
-1. Install dependencies:
-```
-npm install
-```
+Om het nummer te wijzigen, verander je het deel `+3187846448` naar het gewenste nummer. Zorg ervoor dat je het internationale formaat behoudt (met de landcode).
 
-2. Create a `public/images` folder and add the following images:
-   - provacclean-logo.jpg
-   - hero-truck.jpg
-   - service-vacuum.jpg
-   - service-tank.jpg
-   - service-waterjet.jpg
-   - sector-cement.jpg
-   - sector-petro.jpg
-   - sector-food.jpg
+## Teksten Aanpassen
 
-3. Start the development server:
-```
-npm start
-```
+### In preview.html
+Alle teksten in de website zijn beschikbaar in twee talen (Turks en Engels) en worden gemarkeerd met `data-lang` attributen:
 
-## Hoe u zelf foto's kunt uploaden
+- Turkse teksten: `<span data-lang="tr">Turkse tekst</span>`
+- Engelse teksten: `<span data-lang="en">Engelse tekst</span>`
 
-1. **Locatie voor afbeeldingen**:
-   - Alle afbeeldingen moeten in de `public/images` map worden geplaatst
-   - U kunt deze map vinden in de hoofdmap van het project
+Om teksten aan te passen, zoek je de betreffende sectie in `preview.html` en wijzig je de tekst binnen de `<span>` tags.
 
-2. **Afbeeldingen toevoegen**:
-   - Kopieer uw afbeeldingen (.jpg, .png, .svg, etc.) naar de `public/images` map
-   - Gebruik duidelijke bestandsnamen zonder spaties (bijv. `mijn-foto.jpg`)
-   - Voor de beste prestaties, optimaliseer uw afbeeldingen voordat u ze uploadt
+### Belangrijke secties:
+- **Header menu**: regels 30-65
+- **Hero sectie**: regels 70-95
+- **Diensten sectie**: begint rond regel 100
+- **Sectoren sectie**: midden in het bestand
+- **Contact sectie**: tegen het einde van het bestand
 
-3. **Afbeeldingen gebruiken in de website**:
-   - In HTML/JSX: `<img src="./public/images/mijn-foto.jpg" alt="Beschrijving">`
-   - In CSS: `background-image: url('./public/images/mijn-foto.jpg');`
+## Foto's Aanpassen
 
-## Hosting Instructions
+Alle afbeeldingen staan in de map `public/images/`. Om een afbeelding te vervangen:
 
-### Option 1: Netlify (Recommended)
+1. Plaats je nieuwe afbeelding in deze map
+2. Zoek in `preview.html` naar de afbeelding die je wilt vervangen
+3. Wijzig het `src` attribuut naar het pad van je nieuwe afbeelding
 
-1. Create a Netlify account at [netlify.com](https://www.netlify.com/)
-2. Build your project:
-```
-npm run build
-```
-3. Drag and drop the `build` folder to Netlify's upload area or connect your GitHub repository
+### Belangrijke afbeeldingen:
+- **Logo**: `./public/images/WhatsApp Image 2025-09-19 at 09.57.07 - Bewerkt.png` (regel 28 en 547)
+- **Hero afbeelding**: `./public/images/vacuum-truck.svg` (regel 76)
+- **Service iconen**: diverse SVG bestanden in de `public/images/` map
 
-### Option 2: Vercel
+## Deployment met Vercel
 
-1. Install Vercel CLI:
-```
-npm install -g vercel
-```
-2. Deploy:
-```
-vercel
-```
+Voor deployment met Vercel:
+1. Zorg ervoor dat je `vercel.json` bestand correct is ingesteld
+2. Gebruik "Static Site" als Framework Preset
+3. Stel de Root Directory in op `.`
 
-### Option 3: GitHub Pages
+## Mobiel Menu
 
-1. Install gh-pages:
-```
-npm install --save gh-pages
-```
-2. Add to package.json:
-```json
-"homepage": "https://yourusername.github.io/provacclean",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}
-```
-3. Deploy:
-```
-npm run deploy
-```"# Provac" 
-"# Provac" 
+Het mobiele menu is nu volledig functioneel. De code hiervoor staat in:
+- HTML structuur: regels 67-104 in `preview.html`
+- JavaScript functionaliteit: in het `<script>` gedeelte aan het einde van het bestand
