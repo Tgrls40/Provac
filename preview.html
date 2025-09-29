@@ -500,7 +500,12 @@
         </button>
       </div>
       
-      <form id="modalContactForm" class="space-y-4">
+      <form action="https://formsubmit.co/info@provacclean.com" method="POST" id="modalContactForm" class="space-y-4">
+        <!-- FormSubmit configuratie -->
+        <input type="hidden" name="_subject" value="Nieuw teklif formulier bericht">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://provacclean.com/thank-you">
+        
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="block text-sm font-medium text-neutral-700 mb-1">Ad Soyad*</label>
@@ -602,44 +607,8 @@
         }
       });
       
-      // Handle form submission
-      if (modalContactForm) {
-        modalContactForm.addEventListener('submit', function(e) {
-          e.preventDefault(); // Prevent actual form submission
-          
-          // Show success message
-          modalFormSuccess.classList.remove('hidden');
-          
-          // Disable submit button to prevent multiple submissions
-          document.getElementById('modalSubmitBtn').disabled = true;
-          
-          // In a real application, you would send the form data to a server here
-          // For example:
-          // const formData = new FormData(modalContactForm);
-          // fetch('https://jouw-server-url.nl/contact', {
-          //   method: 'POST',
-          //   body: formData
-          // })
-          // .then(response => response.json())
-          // .then(data => console.log('Success:', data))
-          // .catch(error => console.error('Error:', error));
-          
-          // For demo purposes, we'll just simulate a successful submission
-          
-          // After 3 seconds, close the modal
-          setTimeout(function() {
-            contactModal.classList.add('hidden');
-            document.body.style.overflow = '';
-            
-            // Reset form and hide success message after closing
-            setTimeout(function() {
-              modalContactForm.reset();
-              modalFormSuccess.classList.add('hidden');
-              document.getElementById('modalSubmitBtn').disabled = false;
-            }, 500);
-          }, 3000);
-        });
-      }
+      // Geen JavaScript event handler meer voor het formulier
+      // Het formulier wordt nu direct naar FormSubmit verzonden
     });
   </script>
     <!-- Language Switcher Script -->
