@@ -46,7 +46,7 @@ const translations = {
       {
         title: "Vakum Kamyonu Hizmetleri",
         desc: "Çamur, kum, çimento, granül ve yağ kalıntıları gibi ıslak/kuru malzemelerin emilmesi, taşınması ve bertarafı.",
-        img: "/images/service-vacuum.jpg",
+        img: "/images/what",
       },
       {
         title: "Tank & Silo Temizliği",
