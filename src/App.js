@@ -51,7 +51,7 @@ const translations = {
       {
         title: "Tank & Silo Temizliği",
         desc: "Tank, silo ve depolama sistemlerinin mekanik ve yüksek basınçlı güvenli temizliği.",
-        img: "/images/service-tank.jpg",
+        img: "/images/service-silo.goed.jpg",
       },
       {
         title: "Yüksek Basınçlı Su Jeti",

@@ -59,3 +59,14 @@ Voor deployment met Vercel:
 Het mobiele menu is nu volledig functioneel. De code hiervoor staat in:
 - HTML structuur: regels 67-104 in `preview.html`
 - JavaScript functionaliteit: in het `<script>` gedeelte aan het einde van het bestand
+
+## Vercel Analytics
+
+Vercel Web Analytics is toegevoegd zodat je verkeer kunt meten zonder extra cookies.
+
+- Toegevoegd in `preview.html`: vlak voor `</body>` staat een duidelijk gemarkeerd blok:
+  - `<!-- Vercel Analytics: eenvoudig terug te vinden block -->`
+  - `<script defer src="/_vercel/insights/script.js"></script>`
+- Toegevoegd in `public/index.html`: hetzelfde blok staat direct boven `</body>`.
+
+Op Vercel werkt deze script automatisch. Lokaal doet het niets en veroorzaakt geen fouten. Wil je Analytics verwijderen of aanpassen, zoek dan naar de bovenstaande comment.
