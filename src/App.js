@@ -123,7 +123,7 @@ const translations = {
       {
         title: "Tank & Silo Cleaning",
         desc: "Mechanical and high‑pressure cleaning of tanks, silos and storage systems with safe work procedures.",
-        img: "/images/service-tank.jpg",
+        img: "/images/service-silo.goed.jpg",
       },
       {
         title: "High‑Pressure Water Jet",
